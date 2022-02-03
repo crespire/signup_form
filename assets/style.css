@@ -1,4 +1,63 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    align-items: stretch;
+}
+
 .sidebar {
+    min-width: 30vw;
+    flex-grow: 1;
     background-image: url("markus-spiske-FQbfZrFAhxc-unsplash.jpg");
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    color: white;
+}
+
+.attribution {
+    font-size: x-small;
+    justify-self: flex-end;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.logo > img {
+    max-width: 250px;
+    max-height: 250px;
+    height: auto;
+    width: auto;
+}
+
+.content {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3em;
+}
+
+.content > * {
+    width: 100%;
+}
+
+div.login {
+    align-self: flex-start;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
 }

@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=800, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link href="assets/style.css" rel="stylesheet"> 
     <title>Sign Up Form</title>
 </head>
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img src="assets/odin-lined.png" />
+            <img src="assets/odin-lined.png" /> ODIN
         </div>
+        <div class="attribution">Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
     </div>
-    <div class="main">
+    <div class="content">
         <p>Please don't enter any real information. You can make something up, or even be cheeky, but all you need to do is sign up so that we can get this going.</p>
         <form action="">
             <fieldset>
@@ -25,15 +30,17 @@
                 <input name="email" id="email" type="email" required placeholder="adr@domain.tld">
                 <label for="phone">Phone</label>
                 <input name="phone" id="phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="555-555-5555">
-                <p>Password must be between 8 and 100 characters long. It should contain at least one of each: 1 uppercase letter, 1 lowercase letter, and 1 number or special character.</p>
+                <!-- Password must be between 8 and 100 characters long. It should contain at least one of each: 1 uppercase letter, 1 lowercase letter, and 1 number or special character. -->
                 <label for="pw">Password</label>
                 <input name="pw" id="pw" type="password" required title="Please check the password requirements." pattern="^(?=.*[\d\W])(?=.*[a-z])(?=.*[A-Z]).{8,100}$">
                 <label for="pwc">Confirm Password</label>
                 <input name="pwc" id="pwc" type="password" required title="Please check the password requirements." pattern="^(?=.*[\d\W])(?=.*[a-z])(?=.*[A-Z]).{8,100}$">
-                <button>Create Account</button>
             </fieldset>
+            <button type="submit">Create Account</button>
         </form>
-        <p>Already have an account? <a>Log in</a></p>
+        <div class="login">
+            <p>Already have an account? <a>Log in</a></p>
+        </div>
     </div>
 </body>
 </html>
