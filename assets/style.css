@@ -4,6 +4,7 @@ body {
     display: flex;
     font-family: 'Roboto', sans-serif;
     align-items: stretch;
+    background-color: #f3f3f3;
 }
 
 .sidebar {
@@ -26,11 +27,14 @@ body {
 }
 
 .logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.25);
+    font-size:5em;
+    
 }
 
 .logo > img {
@@ -46,18 +50,53 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 3em;
 }
 
 .content > * {
+    box-sizing: border-box;
+    padding-left: 3em;
     width: 100%;
 }
 
-div.login {
-    align-self: flex-start;
+.fields {
+    box-shadow: 0 5px #d6d6d6;
+    background-color: white;
+    margin-left: -3em;
+    padding-left: 2.25em;
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
+
+fieldset {
+    border: 0;
+    max-width: 60%;
+    align-self: flex-start;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, 0.5em 1.5em);
+    gap: 15px 15px;
+    justify-items: stretch;
+    align-items: start;
+}
+
+button {
+    margin-top: 3em;
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #FFFFFF;
+    background-color: lightsalmon;
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.focus {
+    outline: 1px solid lightblue;
+}
+
+.error:invalid {
+    outline: 1px solid red;
 }

@@ -20,26 +20,28 @@
     <div class="content">
         <p>Please don't enter any real information. You can make something up, or even be cheeky, but all you need to do is sign up so that we can get this going.</p>
         <form action="">
-            <fieldset>
-                <legend>Gimmie the goods!</legend>
-                <label for="first_name">*First Name</label>
-                <input name="first_name" id="first_name" type="text" required>
-                <label for="last_name">Last Name</label>
-                <input name="last_name" id="last_name" type="text">
-                <label for="email">*Email</label>
-                <input name="email" id="email" type="email" required placeholder="adr@domain.tld">
-                <label for="phone">Phone</label>
-                <input name="phone" id="phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="555-555-5555">
-                <!-- Password must be between 8 and 100 characters long. It should contain at least one of each: 1 uppercase letter, 1 lowercase letter, and 1 number or special character. -->
-                <label for="pw">Password</label>
-                <input name="pw" id="pw" type="password" required title="Please check the password requirements." pattern="^(?=.*[\d\W])(?=.*[a-z])(?=.*[A-Z]).{8,100}$">
-                <label for="pwc">Confirm Password</label>
-                <input name="pwc" id="pwc" type="password" required title="Please check the password requirements." pattern="^(?=.*[\d\W])(?=.*[a-z])(?=.*[A-Z]).{8,100}$">
-            </fieldset>
+            <div class="fields">
+                <fieldset>
+                    <legend><h3>Gimmie the goods!</h3></legend>
+                    <label for="first_name">*First Name</label>
+                    <label for="last_name">Last Name</label>
+                    <input name="first_name" id="first_name" type="text" required>
+                    <input class="focus" name="last_name" id="last_name" type="text">
+                    <label for="email">*Email</label>
+                    <label for="phone">Phone</label>
+                    <input name="email" id="email" type="email" required placeholder="adr@domain.tld">
+                    <input name="phone" id="phone" type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="555-555-5555">
+                    <!-- Password must be between 8 and 100 characters long. It should contain at least one of each: 1 uppercase letter, 1 lowercase letter, and 1 number or special character. -->
+                    <label for="pw">*Password</label>
+                    <label for="pwc">*Confirm Password</label>
+                    <input class="error" name="pw" id="pw" type="password" required title="Please check the password requirements." pattern="^(?=.*[\d\W])(?=.*[a-z])(?=.*[A-Z]).{8,100}$">
+                    <input class="error" name="pwc" id="pwc" type="password" required title="Please check the password requirements." pattern="^(?=.*[\d\W])(?=.*[a-z])(?=.*[A-Z]).{8,100}$">
+                </fieldset>
+            </div>
             <button type="submit">Create Account</button>
         </form>
         <div class="login">
-            <p>Already have an account? <a>Log in</a></p>
+            <p>Already have an account? <a href="#">Log in.</a></p>
         </div>
     </div>
 </body>
